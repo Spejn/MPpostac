@@ -2,31 +2,58 @@
 #include <ctime>
 using namespace std;
 
-int sil, szy, zre, spo, i;
+int i;
 
 
 void chlop()
 {
 	int nK = 2;
-	cout << "chlop";
+	cout << " \n \n chlop \n\n\n";
 
-	while (i <= 3)  // ustawiæ 4 losowania dla 4 statystyk ze sprawdzeniem sumy wylosowanych liczb
-	{
-		srand((int)time(NULL));
-		unsigned nWylosowana = rand() % nK + 1;
-		i++;
-		cout << "\n wynik: " << nWylosowana; // w tej chwili daje wyniki takie same (za ma³a ró¿nica czasu)
-		// nie wyœwietla nazw statystyk
-	}
+	
+		srand(time(NULL));
+		std::cout << "sila: " << std::rand() % nK + 1 << std::endl;
+		int liczba = std::rand() % nK +1;
+		std::cout << "Szybkosc: " << liczba << std::endl;
+		liczba = std::rand() % nK + 1;
+		std::cout << "zrecznosc: " << liczba << std::endl;
+		liczba = std::rand() % nK + 1;
+		std::cout << "spostrzegawczosc: " << liczba << std::endl;
+		
+	
 
 }
 void wojownik()
 {
-	cout << "wojownik";
+	int nK = 4;
+	cout << " \n \n wojownik \n\n\n";
+
+
+	srand(time(NULL));
+	std::cout << "sila: " << std::rand() % nK + 1 << std::endl;
+	int liczba = std::rand() % nK + 1;
+	std::cout << "Szybkosc: " << liczba << std::endl;
+	liczba = std::rand() % nK + 1;
+	std::cout << "zrecznosc: " << liczba << std::endl;
+	liczba = std::rand() % nK + 1;
+	std::cout << "spostrzegawczosc: " << liczba << std::endl;
+
 }
 void mistrz()
 {
-	cout << "mistrz";
+	int nK = 6;
+	cout << " \n \n mistrz \n\n\n";
+
+
+	srand(time(NULL));
+	std::cout << "sila: " << std::rand() % nK + 1 << std::endl;
+	int liczba = std::rand() % nK + 1;
+	std::cout << "Szybkosc: " << liczba << std::endl;
+	liczba = std::rand() % nK + 1;
+	std::cout << "zrecznosc: " << liczba << std::endl;
+	liczba = std::rand() % nK + 1;
+	std::cout << "spostrzegawczosc: " << liczba << std::endl;
+
 }
 
 void main()
@@ -39,5 +66,6 @@ void main()
 	case 1: chlop(); break;
 	case 2: wojownik(); break;
 	case 3: mistrz(); break;
+	default: break;
 	}
 }
