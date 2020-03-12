@@ -2,9 +2,23 @@
 #include <ctime>
 using namespace std;
 
+int sil, szy, zre, spo, i;
+
+
 void chlop()
 {
+	int nK = 2;
 	cout << "chlop";
+
+	while (i <= 3)  // ustawiæ 4 losowania dla 4 statystyk ze sprawdzeniem sumy wylosowanych liczb
+	{
+		srand((int)time(NULL));
+		unsigned nWylosowana = rand() % nK + 1;
+		i++;
+		cout << "\n wynik: " << nWylosowana; // w tej chwili daje wyniki takie same (za ma³a ró¿nica czasu)
+		// nie wyœwietla nazw statystyk
+	}
+
 }
 void wojownik()
 {
