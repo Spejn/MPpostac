@@ -1,11 +1,13 @@
+// wersja alpha dalej dodac umiejetnosci dodatkowe (losowe - zalezne w pewnym stopniu od klasy
 #include <iostream>
 #include <ctime>
 using namespace std;
 
-int nK;
+int nK; // ko
 int sprawdzenie;
 int Ws;  //wartosc do sprawdzenia
 int liczba1, liczba2, liczba3, liczba4;
+int st; // statystyki ogólnie
 
 void losowaniestatystyk()
 {
@@ -28,8 +30,40 @@ void losowaniestatystyk()
 
 void kchlop()
 {
-	int st = 2;
-	cout << "\numiejetnosc " << "uprawa pola: " << st << endl << "umiejetnosc " << "widly: " << st << endl;
+	st = 2;
+	cout << "\numiejetnosc\n" << "uprawa pola: " << st << endl << "widly: " << st << endl;
+}
+void kwojownik()
+{
+
+	cout << "\numiejetnosc\n" << "dlugie ostrza: " << st << endl << "krotkie ostrza: " << st << endl << "lancuchy: " <<
+		st	<< endl << "walka wrecz: " << st << endl;
+
+}
+
+void kstrzelec()
+{
+
+	cout << "\numiejetnosc\n" << "luk: " << st << endl << "noze do rzucania: " << st << endl << "dmuchawki: " <<
+		st << endl << "bron egzotyczna: " << st << endl;
+}
+
+void ktruciciel()
+{
+	cout << "\numiejetnosc\n" << "podstawy lecenia: " << st << endl << "podstawy zatruwania: " << st << endl << "alchemia: " <<
+		st << endl << "zielarstwo: " << st << endl;
+}
+
+void kdemagog()
+{
+	cout << "\numiejetnosc\n" << "demagogia: " << st << endl << "elokwencja: " << st << endl << "targowanie: " <<
+		st << endl << "obycie w towarzystwie " << st << endl << "manipulacje: " << st << endl;
+}
+
+void kzwiadowca()
+{
+	cout << "\numiejetnosc\n" << "sledzenie: " << st << endl << "podsluchiwanie: " << st << endl << "tortury: " <<
+		st << endl << "zbieranie informacji " << st << endl;
 }
 
 void chlop()
@@ -65,11 +99,28 @@ void wojownik()
 {
 
 	cout << " \n \n wojownik \n\n\n";
-
+	st = 4;
 	nK = 4;
 	Ws = 10;
 	losowaniestatystyk();
 
+	int klasa;
+	do
+	{
+
+		cout << "\n\nwybierz klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\nTwoj wybor: ";
+		cin >> klasa;
+
+
+		switch (klasa)
+		{
+		case 1: kwojownik(); break;
+		case 2: kstrzelec(); break;
+		case 3: ktruciciel(); break;
+		case 4: kdemagog(); break;
+		default: cout << "inne klasy sa niedostepne!"; break;
+		}
+	} while (klasa >= 1 && klasa <= 4);
 
 }
 void mistrz()
@@ -79,6 +130,42 @@ void mistrz()
 	nK = 6;
 	Ws = 15;
 	losowaniestatystyk();
+
+	int klasa;
+	do
+	{
+		st = 6;
+		cout << "\n\nwybierz glowna klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\nTwoj wybor: ";
+		cin >> klasa;
+
+
+		switch (klasa)
+		{
+		case 1: kwojownik(); break;
+		case 2: kstrzelec(); break;
+		case 3: ktruciciel(); break;
+		case 4: kdemagog(); break;
+		default: cout << "inne klasy sa niedostepne!"; break;
+		}
+	} while (klasa <= 1 && klasa >= 4);
+
+	int klasa2;
+	do
+	{
+		st = 4;
+		cout << "\n\nwybierz druga klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\nTwoj wybor: ";
+		cin >> klasa;
+
+
+		switch (klasa)
+		{
+		case 1: kwojownik(); break;
+		case 2: kstrzelec(); break;
+		case 3: ktruciciel(); break;
+		case 4: kdemagog(); break;
+		default: cout << "inne klasy sa niedostepne!"; break;
+		}
+	} while (klasa <= 1 && klasa >= 4);
 
 }
 
