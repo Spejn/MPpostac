@@ -4,6 +4,11 @@ using namespace std;
 
 int i;
 
+void kchlop()
+{
+	int st = 2;
+	cout << "\numiejetnosc " << "uprawa pola: " << st << endl << "umiejetnosc " << "widly: " << st << endl;
+}
 
 void chlop()
 {
@@ -19,7 +24,20 @@ void chlop()
 		std::cout << "zrecznosc: " << liczba << std::endl;
 		liczba = std::rand() % nK + 1;
 		std::cout << "spostrzegawczosc: " << liczba << std::endl;
+		int klasa;
+		do
+		{
 		
+		cout << "\n\nwybierz klase: \n 1. chlop\nTwoj wybor: ";
+		cin >> klasa;
+
+		
+			switch (klasa)
+			{
+			case 1: kchlop(); break;
+			default: cout << "inne klasy sa niedostepne!"; break;
+			}
+		} while (klasa != 1);
 	
 
 }
@@ -59,13 +77,16 @@ void mistrz()
 void main()
 {
 	int rodzaj;
-	cout << "wybierz rodzaj postaci: \n 1. chlop \n 2. wojownik \n 3. mistrz \n Twoj wybor: ";
-	cin >> rodzaj;
-	switch (rodzaj)
-	{
-	case 1: chlop(); break;
-	case 2: wojownik(); break;
-	case 3: mistrz(); break;
-	default: break;
-	}
+	cout << "stworz przeciwnika lub towarzysza dla Twoich graczy!";
+	do
+	{ 
+		cout << "\n\n\n\nwybierz rodzaj postaci: \n 1. chlop \n 2. wojownik \n 3. mistrz \n\n Twoj wybor: ";
+		cin >> rodzaj;
+		switch (rodzaj)
+		{
+		case 1: chlop(); break;
+		case 2: wojownik(); break;
+		case 3: mistrz(); break;
+		}
+	} while (rodzaj >= 1 && rodzaj <= 3);
 }
