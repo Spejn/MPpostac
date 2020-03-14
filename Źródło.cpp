@@ -22,48 +22,48 @@ void losowaniestatystyk()
 	} while (sprawdzenie <= Ws);
 
 	
-	cout << "sila: " << liczba1 << endl;
-	cout << "szybkosc: " << liczba2 << endl;
-	cout << "zrecznosc: " << liczba3 << endl;
-	cout << "spostrzegawczosc: " << liczba4 << endl;
+	cout << "\t\t\tsila: " << liczba1 << endl;
+	cout << "\t\t\tszybkosc: " << liczba2 << endl;
+	cout << "\t\t\tzrecznosc: " << liczba3 << endl;
+	cout << "\t\t\tspostrzegawczosc: " << liczba4 << endl;
 }
 
 void kchlop()
 {
 	st = 2;
-	cout << "\numiejetnosc\n" << "uprawa pola: " << st << endl << "widly: " << st << endl;
+	cout << "\n\t\t\tumiejetnosc\n" << "\t\tuprawa pola: " << st <<"\twidly: " << st << endl;
 }
 void kwojownik()
 {
 
-	cout << "\numiejetnosc\n" << "dlugie ostrza: " << st << endl << "krotkie ostrza: " << st << endl << "lancuchy: " <<
-		st	<< endl << "walka wrecz: " << st << endl;
+	cout << "\n\t\t\tumiejetnosc\n" << "\t\tdlugie ostrza: " << st << "\tkrotkie ostrza: " << st << endl << "\t\tlancuchy: " <<
+		st	<< "\t\twalka wrecz: " << st << endl;
 
 }
 
 void kstrzelec()
 {
 
-	cout << "\numiejetnosc\n" << "luk: " << st << endl << "noze do rzucania: " << st << endl << "dmuchawki: " <<
-		st << endl << "bron egzotyczna: " << st << endl;
+	cout << "\n\t\t\tumiejetnosc\n" << "\t\tluk: " << st << "\t\tnoze do rzucania: " << st << endl << "\t\tdmuchawki: " <<
+		st << "\tbron egzotyczna: " << st << endl;
 }
 
 void ktruciciel()
 {
-	cout << "\numiejetnosc\n" << "podstawy lecenia: " << st << endl << "podstawy zatruwania: " << st << endl << "alchemia: " <<
-		st << endl << "zielarstwo: " << st << endl;
+	cout << "\n\t\t\tumiejetnosc\n" << "\t\tpodstawy lecenia: " << st << "\tpodstawy zatruwania: " << st << endl << "\t\talchemia: " <<
+		st << "\tzielarstwo: " << st << endl;
 }
 
 void kdemagog()
 {
-	cout << "\numiejetnosc\n" << "demagogia: " << st << endl << "elokwencja: " << st << endl << "targowanie: " <<
-		st << endl << "obycie w towarzystwie " << st << endl << "manipulacje: " << st << endl;
+	cout << "\n\t\t\tumiejetnosc\n" << "\t\tdemagogia: " << st << "\telokwencja: " << st << "\ttargowanie: " <<
+		st << endl << "\t\tobycie w towarzystwie " << st << "\t\tmanipulacje: " << st << endl;
 }
 
 void kzwiadowca()
 {
-	cout << "\numiejetnosc\n" << "sledzenie: " << st << endl << "podsluchiwanie: " << st << endl << "tortury: " <<
-		st << endl << "zbieranie informacji " << st << endl;
+	cout << "\n\t\t\tumiejetnosc\n" << "\tsledzenie: " << st << "\tpodsluchiwanie: " << st << endl << "\t\ttortury: " <<
+		st << "\tzbieranie informacji " << st << endl;
 }
 
 void chlop()
@@ -108,7 +108,7 @@ void wojownik()
 	do
 	{
 
-		cout << "\n\nwybierz klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\nTwoj wybor: ";
+		cout << "\n\nwybierz klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\n5. zwiadowca\nTwoj wybor: ";
 		cin >> klasa;
 
 
@@ -118,9 +118,10 @@ void wojownik()
 		case 2: kstrzelec(); break;
 		case 3: ktruciciel(); break;
 		case 4: kdemagog(); break;
+		case 5: kzwiadowca(); break;
 		default: cout << "inne klasy sa niedostepne!"; break;
 		}
-	} while (klasa >= 1 && klasa <= 4);
+	} while (klasa <= 1 && klasa >= 4);
 
 }
 void mistrz()
@@ -135,7 +136,7 @@ void mistrz()
 	do
 	{
 		st = 6;
-		cout << "\n\nwybierz glowna klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\nTwoj wybor: ";
+		cout << "\n\nwybierz glowna klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\n5. zwiadowca\nTwoj wybor: ";
 		cin >> klasa;
 
 
@@ -145,6 +146,7 @@ void mistrz()
 		case 2: kstrzelec(); break;
 		case 3: ktruciciel(); break;
 		case 4: kdemagog(); break;
+		case 5: kzwiadowca(); break;
 		default: cout << "inne klasy sa niedostepne!"; break;
 		}
 	} while (klasa <= 1 && klasa >= 4);
@@ -153,7 +155,7 @@ void mistrz()
 	do
 	{
 		st = 4;
-		cout << "\n\nwybierz druga klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\nTwoj wybor: ";
+		cout << "\n\nwybierz druga klase: \n1. wojownik\n2. strzelec\n3. truciciel\n4. demagog\n5. zwiadowca\nTwoj wybor: ";
 		cin >> klasa;
 
 
@@ -163,6 +165,7 @@ void mistrz()
 		case 2: kstrzelec(); break;
 		case 3: ktruciciel(); break;
 		case 4: kdemagog(); break;
+		case 5: kzwiadowca(); break;
 		default: cout << "inne klasy sa niedostepne!"; break;
 		}
 	} while (klasa <= 1 && klasa >= 4);
