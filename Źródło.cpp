@@ -2,7 +2,29 @@
 #include <ctime>
 using namespace std;
 
-int i;
+int nK;
+int sprawdzenie;
+int Ws;  //wartosc do sprawdzenia
+int liczba1, liczba2, liczba3, liczba4;
+
+void losowaniestatystyk()
+{
+	do
+	{
+		srand(time(NULL));
+		liczba1 = rand() % nK + 1;
+		liczba2 = rand() % nK + 1;
+		liczba3 = rand() % nK + 1;
+		liczba4 = rand() % nK + 1;
+		sprawdzenie = liczba1 + liczba2 + liczba3 + liczba4;
+	} while (sprawdzenie <= Ws);
+
+	
+	cout << "sila: " << liczba1 << endl;
+	cout << "szybkosc: " << liczba2 << endl;
+	cout << "zrecznosc: " << liczba3 << endl;
+	cout << "spostrzegawczosc: " << liczba4 << endl;
+}
 
 void kchlop()
 {
@@ -12,18 +34,16 @@ void kchlop()
 
 void chlop()
 {
-	int nK = 2;
+
+
 	cout << " \n \n chlop \n\n\n";
 
+	nK = 2;
+	Ws = 5;
+	losowaniestatystyk();
+
 	
-		srand(time(NULL));
-		std::cout << "sila: " << std::rand() % nK + 1 << std::endl;
-		int liczba = std::rand() % nK +1;
-		std::cout << "Szybkosc: " << liczba << std::endl;
-		liczba = std::rand() % nK + 1;
-		std::cout << "zrecznosc: " << liczba << std::endl;
-		liczba = std::rand() % nK + 1;
-		std::cout << "spostrzegawczosc: " << liczba << std::endl;
+		
 		int klasa;
 		do
 		{
@@ -43,34 +63,22 @@ void chlop()
 }
 void wojownik()
 {
-	int nK = 4;
+
 	cout << " \n \n wojownik \n\n\n";
 
+	nK = 4;
+	Ws = 10;
+	losowaniestatystyk();
 
-	srand(time(NULL));
-	std::cout << "sila: " << std::rand() % nK + 1 << std::endl;
-	int liczba = std::rand() % nK + 1;
-	std::cout << "Szybkosc: " << liczba << std::endl;
-	liczba = std::rand() % nK + 1;
-	std::cout << "zrecznosc: " << liczba << std::endl;
-	liczba = std::rand() % nK + 1;
-	std::cout << "spostrzegawczosc: " << liczba << std::endl;
 
 }
 void mistrz()
 {
-	int nK = 6;
+
 	cout << " \n \n mistrz \n\n\n";
-
-
-	srand(time(NULL));
-	std::cout << "sila: " << std::rand() % nK + 1 << std::endl;
-	int liczba = std::rand() % nK + 1;
-	std::cout << "Szybkosc: " << liczba << std::endl;
-	liczba = std::rand() % nK + 1;
-	std::cout << "zrecznosc: " << liczba << std::endl;
-	liczba = std::rand() % nK + 1;
-	std::cout << "spostrzegawczosc: " << liczba << std::endl;
+	nK = 6;
+	Ws = 15;
+	losowaniestatystyk();
 
 }
 
