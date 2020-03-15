@@ -21,7 +21,10 @@ void losowaniestatystyk()
 		sprawdzenie = liczba1 + liczba2 + liczba3 + liczba4;
 	} while (sprawdzenie <= Ws);
 
-	
+}
+void staty()
+{
+	cout << "\n\n\t\t\tstatystyki\n:";
 	cout << "\t\t\tsila: " << liczba1 << endl;
 	cout << "\t\t\tszybkosc: " << liczba2 << endl;
 	cout << "\t\t\tzrecznosc: " << liczba3 << endl;
@@ -92,7 +95,7 @@ void chlop()
 			default: cout << "inne klasy sa niedostepne!"; break;
 			}
 		} while (klasa != 1);
-	
+		staty();
 
 }
 void wojownik()
@@ -122,7 +125,7 @@ void wojownik()
 		default: cout << "inne klasy sa niedostepne!"; break;
 		}
 	} while (klasa <= 1 && klasa >= 4);
-
+	staty();
 }
 void mistrz()
 {
@@ -169,7 +172,7 @@ void mistrz()
 		default: cout << "inne klasy sa niedostepne!"; break;
 		}
 	} while (klasa <= 1 && klasa >= 4);
-
+	staty();
 }
 
 void main()
